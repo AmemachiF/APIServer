@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="LeanCloud.Engine.Middleware.AspNetCore" Version="2020.9.10.2" />
+  </ItemGroup>
+
 </Project>

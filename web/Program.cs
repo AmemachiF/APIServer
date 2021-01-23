@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LeanCloud.Engine;
+
+using System;
 
 namespace web
 {
@@ -6,7 +8,9 @@ namespace web
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Cloud cloud = new Cloud().UseLog();
+
+            cloud.Start(args);
         }
     }
 }
