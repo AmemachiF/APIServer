@@ -30,3 +30,22 @@ AV.Cloud.define('getBilibiliRoomInfo', (request) => {
         })
     })
 })
+
+AV.Cloud.define('getBilibiliRoomInfoOld', (request) => {
+    const uid = (request.params as any).uid
+    return new Promise((resolve, reject) => {
+        https.get(`https://api.live.bilibili.com/room/v1/Room/getRoomInfoOld?mid=${uid}`, {
+            headers: {
+                Referer: 'https://www.bilibili.com'
+            }
+        }, (res) => {
+            res.on('data', (data) => {
+                resolve(JSON.parse(data))
+            })
+
+            res.on('error', (err) => {
+                reject(err)
+            })
+        })
+    })
+})
