@@ -6,6 +6,9 @@
     "start": "ts-node ./src/bin/www",
     "dev": "nodemon ./src/bin/www"
   },
+  "engines": {
+    "node": "14.x"
+  },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
