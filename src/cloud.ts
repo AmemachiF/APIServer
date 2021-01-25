@@ -11,7 +11,9 @@ AV.Cloud.define('getBilibiliLiveInfo', (request) => {
         }, (res) => {
             res.on('data', (data) => {
                 console.log(String.fromCharCode(data).toString())
-                resolve(JSON.parse(data))
+                if (data) {
+                    resolve(JSON.parse(data))
+                }
             })
 
             res.on('error', (err) => {
@@ -31,7 +33,9 @@ AV.Cloud.define('getBilibiliRoomInfo', (request) => {
         }, (res) => {
             res.on('data', (data) => {
                 console.log(String.fromCharCode(data).toString())
-                resolve(JSON.parse(data))
+                if (data) {
+                    resolve(JSON.parse(data))
+                }
             })
 
             res.on('error', (err) => {
@@ -51,7 +55,9 @@ AV.Cloud.define('getBilibiliRoomInfoOld', (request) => {
         }, (res) => {
             res.on('data', (data) => {
                 console.log(String.fromCharCode(data).toString())
-                resolve(JSON.parse(data))
+                if (data) {
+                    resolve(JSON.parse(data))
+                }
             })
 
             res.on('error', (err) => {
@@ -72,7 +78,9 @@ AV.Cloud.define('getBilibiliRoomPlayUrl', (request) => {
         }, (res) => {
             res.on('data', (data) => {
                 console.log(String.fromCharCode(data).toString())
-                resolve(JSON.parse(data))
+                if (data) {
+                    resolve(JSON.parse(data))
+                }
             })
 
             res.on('error', (err) => {
