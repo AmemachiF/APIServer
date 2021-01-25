@@ -2,7 +2,6 @@ import AV from 'leanengine'
 import https from 'https'
 
 const headers = {
-    Referer: 'https://www.bilibili.com',
     Cookie: 'LIVE_BUVID='
 }
 
@@ -13,9 +12,9 @@ AV.Cloud.define('getBilibiliLiveInfo', (request) => {
             headers
         }, (res) => {
             res.on('data', (data) => {
-                console.log(data)
+                console.log(data && JSON.parse(data) || {})
                 if (data) {
-                    resolve(JSON.parse(data))
+                    resolve(data && JSON.parse(data) || {})
                 }
             })
 
@@ -33,9 +32,9 @@ AV.Cloud.define('getBilibiliRoomInfo', (request) => {
             headers
         }, (res) => {
             res.on('data', (data) => {
-                console.log(data)
+                console.log(data && JSON.parse(data) || {})
                 if (data) {
-                    resolve(JSON.parse(data))
+                    resolve(data && JSON.parse(data) || {})
                 }
             })
 
@@ -53,9 +52,9 @@ AV.Cloud.define('getBilibiliRoomInfoOld', (request) => {
             headers
         }, (res) => {
             res.on('data', (data) => {
-                console.log(data)
+                console.log(data && JSON.parse(data) || {})
                 if (data) {
-                    resolve(JSON.parse(data))
+                    resolve(data && JSON.parse(data) || {})
                 }
             })
 
@@ -74,9 +73,9 @@ AV.Cloud.define('getBilibiliRoomPlayUrl', (request) => {
             headers
         }, (res) => {
             res.on('data', (data) => {
-                console.log(data)
+                console.log(data && JSON.parse(data) || {})
                 if (data) {
-                    resolve(JSON.parse(data))
+                    resolve(data && JSON.parse(data) || {})
                 }
             })
 
