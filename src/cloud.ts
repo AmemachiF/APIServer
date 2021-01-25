@@ -12,9 +12,13 @@ AV.Cloud.define('getBilibiliLiveInfo', (request) => {
             headers
         }, (res) => {
             res.on('data', (data) => {
-                console.log(data && JSON.parse(data) || {})
-                if (data) {
-                    resolve(data && JSON.parse(data) || {})
+                try {
+                    console.log(data && JSON.parse(data) || {})
+                    if (data) {
+                        resolve(data && JSON.parse(data) || {})
+                    }
+                } catch (error) {
+                    reject({error, data})
                 }
             })
 
@@ -32,9 +36,13 @@ AV.Cloud.define('getBilibiliRoomInfo', (request) => {
             headers
         }, (res) => {
             res.on('data', (data) => {
-                console.log(data && JSON.parse(data) || {})
-                if (data) {
-                    resolve(data && JSON.parse(data) || {})
+                try {
+                    console.log(data && JSON.parse(data) || {})
+                    if (data) {
+                        resolve(data && JSON.parse(data) || {})
+                    }
+                } catch (error) {
+                    reject({error, data})
                 }
             })
 
@@ -52,9 +60,13 @@ AV.Cloud.define('getBilibiliRoomInfoOld', (request) => {
             headers
         }, (res) => {
             res.on('data', (data) => {
-                console.log(data && JSON.parse(data) || {})
-                if (data) {
-                    resolve(data && JSON.parse(data) || {})
+                try {
+                    console.log(data && JSON.parse(data) || {})
+                    if (data) {
+                        resolve(data && JSON.parse(data) || {})
+                    }
+                } catch (error) {
+                    reject({error, data})
                 }
             })
 
@@ -73,9 +85,13 @@ AV.Cloud.define('getBilibiliRoomPlayUrl', (request) => {
             headers
         }, (res) => {
             res.on('data', (data) => {
-                console.log(data && JSON.parse(data) || {})
-                if (data) {
-                    resolve(data && JSON.parse(data) || {})
+                try {
+                    console.log(data && JSON.parse(data) || {})
+                    if (data) {
+                        resolve(data && JSON.parse(data) || {})
+                    }
+                } catch (error) {
+                    reject({error, data})
                 }
             })
 
