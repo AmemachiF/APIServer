@@ -10,6 +10,7 @@ AV.Cloud.define('getBilibiliLiveInfo', (request) => {
             }
         }, (res) => {
             res.on('data', (data) => {
+                console.log(String.fromCharCode(data).toString())
                 resolve(JSON.parse(data))
             })
 
@@ -29,6 +30,7 @@ AV.Cloud.define('getBilibiliRoomInfo', (request) => {
             }
         }, (res) => {
             res.on('data', (data) => {
+                console.log(String.fromCharCode(data).toString())
                 resolve(JSON.parse(data))
             })
 
@@ -48,6 +50,7 @@ AV.Cloud.define('getBilibiliRoomInfoOld', (request) => {
             }
         }, (res) => {
             res.on('data', (data) => {
+                console.log(String.fromCharCode(data).toString())
                 resolve(JSON.parse(data))
             })
 
@@ -68,6 +71,7 @@ AV.Cloud.define('getBilibiliRoomPlayUrl', (request) => {
             }
         }, (res) => {
             res.on('data', (data) => {
+                console.log(String.fromCharCode(data).toString())
                 resolve(JSON.parse(data))
             })
 
